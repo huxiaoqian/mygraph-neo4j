@@ -19,7 +19,7 @@ Data browser/ 迭代查询节点可视化网络结构
 Console / neo4j的shell
 Indexes / 索引管理
 
-服务器开启shell命令行：
+本地服务器开启shell命令行：
 ```
 进入路径：
    /home/neo4j/neo4j-community-2.2.1
@@ -27,6 +27,7 @@ Indexes / 索引管理
    ./bin/neo4j-shell -path home/ubuntu5/neo4j/neo4j-community-2.2.1/db/data
 进入后 neo4j-sh (?)$
 ```
+
 
 ##2 py2neo安装
 ```
