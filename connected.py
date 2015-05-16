@@ -5,11 +5,11 @@ host_port:"localhost：7474"
 user_name:"neo4j"
 password:"123456"
 '''
-authenticate("localhost:7474", "neo4j", "123456")
-graph = Graph("http://localhost:7474/db/graph1/")
-
-alice = Node("Person", name="Alice", age="10")
-dan = Node("Person", name="Dan", age="23")
+authenticate("219.224.135.126:7474", "neo4j", "neo4j")
+graph = Graph("http://219.224.135.126:7474/db/data/")
+'''
+alice = Node("test1", name="Alice2", age="10")
+dan = Node("test1", name="Dan2", age="23")
 a2d = Relationship(alice, "KNOWS", dan)
 graph.create(alice)
 graph.create(dan)
@@ -19,5 +19,7 @@ print "graph resource:", graph.resource
 print "graph node num:", graph.order
 print "graph node alice:", graph.node(0)
 print "graph relation size:", graph.size
-
+'''
+c_string = "LOAD CSV FROM 'file:///home/ubuntu5/hxq/import-test.csv' AS line CREATE (:test {name:line[1], year:line[2]}) return line"
+graph.cypher.execute(c_string)
 
