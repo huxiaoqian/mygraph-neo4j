@@ -20,6 +20,7 @@ Console / neo4j的shell
 Indexes / 索引管理
 
 系统设置需求：
+http://neo4j.com/docs/stable/linux-performance-guide.html#_file_system_benchmark
 ```
  /etc/security/limits.conf
   增加：  neo4j  soft  nofile  65535
