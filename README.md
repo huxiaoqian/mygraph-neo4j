@@ -11,13 +11,22 @@ database 位置在本地：/home/neo4j/neo4j-community-2.2.1/data/graph.db
 
 开启页面webadmin  打开页面http://localhost:7474/webadmin
 username: neo4j
-password: 123456
+password: neo4j
 
 页面服务：
 Dashboard / 可视化数据库增减变化
 Data browser/ 迭代查询节点可视化网络结构
 Console / neo4j的shell
 Indexes / 索引管理
+
+系统设置需求：
+```
+ /etc/security/limits.conf
+  增加：  neo4j  soft  nofile  65535
+          neo4j  hard  nofile  65535
+/etc/pam.d/su
+  取消注释：   session  required  pam_limits.so
+```
 
 本地服务器开启shell命令行：
 ```
